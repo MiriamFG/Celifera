@@ -1,0 +1,318 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+
+.main-header {
+  background-image: url(imagenes/fondo\ encabezado.jpg); /* ruta de tu imagen */
+  background-size: cover;       /* la imagen cubre todo el header */
+  background-position: center;  /* centrada */
+  background-repeat: no-repeat; /* no se repite */
+  padding: 10px 10px;           /* espacio interno */
+  text-align: center;           /* centra título */
+  position: relative;           /* útil si agregas elementos encima */
+}
+
+.main-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:  rgba(0, 0, 0, 0.5); /* negro semi-transparente */
+  z-index: 0;
+}
+
+.main-header h1,
+.main-header .header-top {
+  position: relative;
+  z-index: 1; /* hace que el texto esté encima del overlay */
+}
+
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+}
+
+.logo{
+   width: 80px;
+   background-color: rgba(255, 255, 255, 0.7); /* fondo blanco semitransparente */
+   padding: 0 2px;   /* espacio alrededor del logo */
+   border-radius: 100px;  /* opcional, esquinas redondeadas */
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 20px;
+    padding: 0;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: rgba(241, 237, 237);
+    font-weight: 400;
+    font-size: small;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #b5c934;; /* verde más claro al pasar el ratón */
+}
+
+
+.titulo{
+    margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.977);
+    text-align: center;
+    font-style: oblique;
+}
+
+.claim{
+    position: relative;  /* permite controlar z-index */
+    z-index: 1;   
+    text-align: center;
+    color: #ffffff !important;
+    font-style: oblique;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s; /* animación suave */
+}
+
+
+
+h2{
+    font-size: 130%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.gluten{
+    background-color: rgb(145, 159, 110);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.gluten h3{
+    font-size: 20px;
+    color: rgb(20, 0, 0);
+}
+
+.gluten ul li{
+    color: #000000;
+}
+
+.resaltado{
+    color: #f6f7f2;
+    font-weight: bold;
+}
+
+p{
+    font-size: 15px;
+    color: #0b0002;
+}
+
+.features .benefits {
+  background-color: hsl(156, 15%, 94%); /* color de fondo suave */
+  padding: 40px 100px;
+  margin: 20px auto;          /* centrado horizontal */
+}
+
+.features .benefits h2 {
+  color: #110e01;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 15px;
+}
+
+.features ul {
+  list-style: none;  /* quita los puntos por defecto */
+  padding: 0;
+  margin: 0;
+}
+
+.features ul li {
+  background-color : rgb(145, 159, 110);/* color de cada ítem */
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  color: #011502;
+  font-weight: 500;
+  transition: transform 0.2s; /* efecto al pasar el ratón */
+}
+
+.features ul li:hover {
+  transform: scale(1.05); /* pequeño efecto hover */
+  background-color: #b8b00b; 
+}
+
+/* Sublistas */
+.features ul li ul {
+  list-style: disc; /* viñetas para subitems */
+  margin-top: 5px;
+  margin-left: 25px;
+  padding-left: 0;
+}
+
+/* Subitems estilo */
+.features ul li ul li {
+  background-color: rgb(189, 193, 152); /* color diferente para subitems */
+  margin-bottom: 5px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+/* Hover subitems */
+.features ul li ul li:hover {
+  background-color: #7d7104; /* hover distinto de principal */
+  transform: none; /* no aplicar scale */
+}
+
+
+.contenedor-secciones {
+  display: flex;           /* coloca hijos en fila */
+  gap: 20px;               /* espacio entre las secciones */
+  padding: 20px;
+}
+
+.features, .benefits {
+  flex: 1;                 /* cada sección ocupa el mismo ancho */
+  background-color: hsl(156, 15%, 94%);
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.benefits ul {
+  list-style: none;  /* quita los puntos por defecto */
+  padding: 0;
+  margin: 0;
+}
+
+.benefits ul li {
+  background-color : rgb(145, 159, 110);/* color de cada ítem */
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  color: #011502;
+  font-weight: 500;
+  transition: transform 0.2s; /* efecto al pasar el ratón */
+}
+
+.benefits ul li:hover {
+  transform: scale(1.05); /* pequeño efecto hover */
+  background-color: #b8b00b; 
+}
+
+.contacto {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  background-color: #eaebd1;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contacto h2 {
+  text-align: center;
+  color: #021204;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+
+.contacto label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #010a02;
+}
+
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #06783f;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contacto button {
+  width: 100%;
+  padding: 12px;
+  background-color:rgb(145, 159, 110);;
+  color: rgb(11, 0, 0);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.contacto button:hover {
+  background-color: #b8b00b;
+  transform: scale(1.03);
+}
+
+.checkbox-terminos label {
+  display: flex;
+  align-items: center;  /* centra verticalmente el checkbox con el texto */
+  gap: 6px;             /* espacio entre checkbox y texto */
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+}
+
+.checkbox-terminos input[type="checkbox"] {
+  transform: scale(1.1); /* agranda un poco la casilla */
+  cursor: pointer;
+  margin: 20px;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  accent-color: #1f830f;;
+}
+
+
+footer {
+  background-color: #555a45;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* separa izquierda y derecha */
+  align-items: center;            /* centra verticalmente */
+  color: white;
+}
+
+.copy {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ecebe3;
+}
+
+.socials a {
+  color: white;
+  font-size: 24px;
+  margin: 0 20px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+  color: #b8930b;
+}
