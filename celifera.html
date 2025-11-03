@@ -1,33 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="celifera.css">
+        <title>Celifera</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     </head>
-
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li>Inicio</li>
-                    <li>Alimentos</li>
-                    <li>Enfermedades</li>
-                </ul>
-            </nav>
-            <h1>Celifera</h1>
-            <p>Bienvenidos</p>
+        <header class="main-header">
+            <div class="header-top">
+                <img src="imagenes/logo Celifera.png" alt="logo" class="logo">
+                <nav>
+                    <ul>
+                        <li><a href="salud.html">Salud</a></li>
+                        <li><a href="alimentos.html">Alimentos</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <h1 class="titulo">Celifera</h1>
+            <p class="claim">esto sirve para el CLAIM</p>
         </header>
-        <img src="imagenes/Captura de pantalla 2025-10-30 205411.png" alt="smile">
-        <h2>Quienes somos</h2>
-        <article>
-            <p>Celifera papapapapapappapapapappapa</p>
-            <p>papapapappapapapapa</p>
-        </article>
+        <main>    
+            <section class="gluten">
+                <h3>Información sobre el <span class="resaltado" >GLUTEN</span></h3>
+                <p>El gluten es una proteína que se encuentra en algunos cereales, principalmente en el <strong>trigo, la cebada y el centeno.</strong>  Su función es dar elasticidad y esponjosidad a los alimentos.
+                    Por ejemplo, gracias al gluten el pan queda esponjoso por dentro y no se rompe fácilmente.</p> 
+                <br>
+                <p>¿En qué alimentos suele estar? El gluten está en muchos alimentos, sobre todo en productos como:
+                    <ul>
+                        <li>Pan, galletas y bollería</li>
+                        <li>Pasta (macarrones, espaguetis…)</li>
+                        <li>Bizcochos, tartas y cereales</li>
+                        <li> Salsas preparadas, rebozados y algunos embutidos</li>
+                    </ul>
 
-        <p>prueba de texto </p>
+                    A veces aparece en alimentos donde no lo imaginarías, porque se usa como <strong class="resaltado">espesante</strong>  o para mejorar la textura <i>(por eso siempre se revisan las etiquetas)</i>.</p>    
+            </section>
 
-        <section>
-            esto es un section
-        </section>
+            <div class="contenedor-secciones">
+                <section class="features">
+                <h2>¿Por qué algunas personas no pueden tomar gluten?</h2>
+                <p> La celiaquía, es una enfermedad que hace que tu cuerpo no tolere el gluten. Cuando lo tomas por accidente o desconocimiento;</p>
+                    <ul>
+                        <li>El sistema inmunitario reacciona y daña el intestino:
+                            <ul>
+                                <li>ocasiona daños en el intestino</li>
+                                <li>problemas digestivos y de salud graves</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="benefits">
+                <h2>¿Qué ocurre si evitan el gluten?</h2>
+                    <ul>
+                        <li>Su digestión mejora</li>
+                        <li>Su intestino se recupera</li>
+                        <li>Se siente con más energía</li>
+                    </ul>
+                    <br>
+                    <p>La única <b><span style="color: rgb(147, 64, 13);">“medicina”</span></b> es seguir una dieta sin gluten de por vida.</p>
+                </section>
+            </div>
+
+            <section class="contacto">
+                <h2>Contacto</h2>
+                    <form action="#" method="post">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
+
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="tu@correo.com">
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+
+                    <!-- Casilla de aceptar términos -->
+                    <div class="checkbox-terminos">
+                        <label>
+                            <input type="checkbox" name="terminos" required>
+                            Acepto los términos y condiciones</a>
+                        </label>
+                    </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+            </section>
+        </main>
+
+        <footer>
+             <div class="footer-content">
+                <p class="copy">© 2025 Celifera. Todos los derechos reservados.</p>
+
+                <div class="socials">
+                  <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </footer>
 
     </body>
 </html>
