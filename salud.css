@@ -6,11 +6,11 @@ body{
 }
 
 .main-header {
-  background-image: url(imagenes/alimentos.jpg); /* ruta de tu imagen */
+  background-image: url(imagenes/salud.jpg); /* ruta de tu imagen */
   background-size: cover;       /* la imagen cubre todo el header */
   background-position: center;  /* centrada */
   background-repeat: no-repeat; /* no se repite */
-  padding: 10px 10px;           /* espacio interno */
+  padding: 50px 20px;           /* espacio interno */
   text-align: center;           /* centra título */
   position: relative;           /* útil si agregas elementos encima */
 }
@@ -66,7 +66,7 @@ nav ul li a{
 }
 
 nav ul li a:hover {
-  color: #b5c934; /* verde más claro al pasar el ratón */
+  color:  #b5c934; 
 }
 
 .titulo{
@@ -83,48 +83,128 @@ h1{
     margin: 1px;
 }
 
-p{
-    font-size: 15px;
-    color: #0b0002;
-}
-
-section{
-    padding: 15px;
-}
-
-
-.tabla-alimentos {
-  width: 100%;
-  border-collapse: collapse;
+section {
+  padding: 40px 20px;
+  margin: 30px auto;
+  border-radius: 12px;
+  background-color: hsl(156, 15%, 94%); /* fondo suave */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   font-family: 'Poppins', sans-serif;
-  margin-top: 20px;
 }
 
-.tabla-alimentos th, .tabla-alimentos td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #ccc;
+/* Títulos de secciones */
+section h2 {
+  color: rgb(20, 50, 20); /* verde oscuro */
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 130%;
 }
 
-.tabla-alimentos th {
-  background-color: rgb(145, 159, 110);
-  color: #fff;
-  font-weight: 600;
+/* Párrafos */
+section p {
+  color: #2c2c2c;
+  line-height: 1.7;
+  font-size: 1rem;
+  text-align: justify;
 }
 
-.tabla-alimentos tbody tr:hover {
-  background-color: hsl(156, 15%, 85%);
+/* Listas */
+section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.permitido {
-  color: #3A7D44; /* verde */
-  font-weight: 600;
+section ul li {
+  background-color: rgb(145, 159, 110); /* verde suave */
+  margin-bottom: 12px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #011502;
+  transition: transform 0.2s, background-color 0.2s;
 }
 
-.prohibido {
-  color: #B00020; /* rojo */
-  font-weight: 600;
+/* Hover en las listas */
+section ul li:hover {
+  transform: scale(1.03);
+  background-color: #b8b00b;; /* verde más intenso */
 }
+
+.sintomas {
+    margin-top: 0; /* elimina el espacio superior solo para esta sección */
+}
+
+.sintomas ul.cubos {
+  display: flex;
+  flex-wrap: wrap;         /* permite que los cubos pasen a la siguiente fila */
+  gap: 20px;               /* espacio entre cubos */
+  justify-content: center; /* centra los cubos horizontalmente */
+  padding: 0;
+  list-style: none;
+}
+
+.sintomas ul.cubos li {
+  background-color: rgb(145, 159, 110); /* verde suave */
+  color: #011502;
+  font-weight: 500;
+  border-radius: 12px;
+  width: 200px;          /* ancho fijo de cada cubo */
+  height: 150px;         /* altura fija de cada cubo */
+  display: flex;          /* para centrar contenido */
+  align-items: center;    /* vertical */
+  justify-content: center;/* horizontal */
+  text-align: center;     /* centra texto si ocupa varias líneas */
+  padding: 10px;
+  box-sizing: border-box;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.sintomas ul.cubos li:hover {
+  transform: scale(1.05);
+  background-color: #b8b00b; /* verde más intenso al pasar el ratón */
+}
+
+
+
+
+/* Diferenciar secciones */
+.diagnostico {
+  background-color: hsl(45, 30%, 97%); /* color beige claro */
+}
+
+.consejos {
+  background-color: hsl(156, 20%, 90%); /* verde muy suave */
+}
+
+.galeria {
+  display: flex;
+  justify-content: center; /* centra las imágenes horizontalmente */
+  gap: 20px;               /* espacio entre imágenes */
+  padding: 20px;
+  flex-wrap: wrap;          /* para que en móvil se apilen */
+  background-color: hsl(156, 20%, 90%); /* opcional, fondo de galería */
+}
+
+.galeria figure {
+  margin: 20px;               /* elimina margen por defecto de figure */
+}
+
+.galeria img {
+  width: 250px;             /* mismo tamaño para todas */
+  height: 350px;            /* ajustar según proporción de las imágenes */
+  object-fit: cover;        /* recorta la imagen manteniendo proporción */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);   /* efecto hover */
+}
+
+
 
 footer {
   background-color: #555a45;
@@ -155,3 +235,4 @@ footer {
   transform: scale(1.2);
   color: #b8930b;
 }
+
