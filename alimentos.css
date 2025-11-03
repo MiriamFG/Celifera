@@ -1,0 +1,32 @@
+.tabla-alimentos {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+}
+
+.tabla-alimentos th, .tabla-alimentos td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.tabla-alimentos th {
+  background-color: rgb(145, 159, 110);
+  color: #fff;
+  font-weight: 600;
+}
+
+.tabla-alimentos tbody tr:hover {
+  background-color: hsl(156, 15%, 85%);
+}
+
+.permitido {
+  color: #3A7D44; /* verde */
+  font-weight: 600;
+}
+
+.prohibido {
+  color: #B00020; /* rojo */
+  font-weight: 600;
+}
