@@ -217,10 +217,12 @@ p{
 .contacto {
   max-width: 500px;
   margin: 40px auto;
-  padding: 25px;
+  padding: 60px;
   background-color: #eaebd1;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .contacto h2 {
@@ -248,6 +250,31 @@ p{
   font-size: 1rem;
   transition: border 0.3s, box-shadow 0.3s;
 }
+
+.contacto select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #06783f;
+  border-radius: 4px;
+}
+
+/* Contenedor que pone género y edad en una fila */
+.fila-genero-edad {
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  gap: 90px; /* espacio entre campos */
+  margin-top: 10px;
+}
+
+/* Ajustar ancho de los campos */
+.campo-genero select {
+  width: 150px;
+}
+
+.campo-edad input {
+  width: 80px; /* más pequeño */
+}
+
 
 .contacto button {
   width: 100%;
@@ -316,3 +343,4 @@ footer {
   transform: scale(1.2);
   color: #b8930b;
 }
+
