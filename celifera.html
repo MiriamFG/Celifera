@@ -65,16 +65,34 @@
 
             <section class="contacto">
                 <h2>Contacto</h2>
-                    <form action="#" method="post">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre" placeholder="Tu nombre">
 
                     <label for="email">Correo electrónico:</label>
                     <input type="email" id="email" name="email" placeholder="tu@correo.com">
-
+        
                     <label for="mensaje">Mensaje:</label>
                     <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..."></textarea>
 
+                    <!-- Contenedor FLEX -->
+                    <div class="fila-genero-edad">
+                    <!-- Género -->
+                    <div class="campo-genero">
+                    <label for="gender">Selecciona tu género</label>
+                    <select id="gender" name="gender">
+                        <option value="">-</option>
+                        <option value="mujer">Mujer</option>
+                        <option value="hombre">Hombre</option>
+                    </select>
+                    </div>
+                    
+                     <!-- Edad -->
+                    <div class="campo-edad">
+                        <label for="edad">Edad:</label>
+                        <input id="edad" type="number" name="age" min="5" max="100" step="5" value="0">
+                        </div>
+                    </div>
+            
                     <!-- Casilla de aceptar términos -->
                     <div class="checkbox-terminos">
                         <label>
